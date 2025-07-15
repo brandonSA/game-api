@@ -1,7 +1,7 @@
 package manticorp.developer.game_api.controllers
 
 import io.swagger.v3.oas.annotations.Operation
-import manticorp.developer.game_api.models.Model
+import manticorp.developer.game_api.models.GameConfig
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -12,9 +12,5 @@ class GameController {
 
     @Operation(summary = "Get game config", description = "Returns the game configuration")
     @GetMapping("/game-config")
-    fun listMessages() = listOf(
-        Model("1", "Hello!"),
-        Model("2", "Bonjour!"),
-        Model("3", "Privet!"),
-    )
+    fun getConfig() = GameConfig(3, GameConfig.GameChoices.entries.toTypedArray())
 }
