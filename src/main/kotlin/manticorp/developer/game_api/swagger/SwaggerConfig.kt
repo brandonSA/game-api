@@ -1,4 +1,4 @@
-package manticorp.developer.game_api
+package manticorp.developer.game_api.swagger
 
 import io.swagger.v3.oas.models.OpenAPI
 import io.swagger.v3.oas.models.info.Info

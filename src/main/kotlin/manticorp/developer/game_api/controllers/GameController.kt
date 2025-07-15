@@ -1,6 +1,7 @@
-package manticorp.developer.game_api
+package manticorp.developer.game_api.controllers
 
 import io.swagger.v3.oas.annotations.Operation
+import manticorp.developer.game_api.models.Model
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController

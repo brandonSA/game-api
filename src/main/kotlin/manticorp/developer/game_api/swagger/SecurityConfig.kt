@@ -1,4 +1,4 @@
-package manticorp.developer.game_api
+package manticorp.developer.game_api.swagger
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
