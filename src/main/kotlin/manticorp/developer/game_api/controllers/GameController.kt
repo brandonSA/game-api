@@ -26,32 +26,32 @@ class GameController {
                 GameTurnResponse(
                     gameTurnRequest.turnNumber,
                     gameResult = GameTurnResponse.GameResult.Tie,
-                    GameConfig.GameChoices.getNameByValue(computerSelection)
+                    GameConfig.GameChoice.getNameByValue(computerSelection)
                 )
             } else if (gameTurnRequest.userSelection.value() === 1 && computerSelection === 3) { // Rock beats scissors
                 GameTurnResponse(
                     gameTurnRequest.turnNumber,
                     gameResult = GameTurnResponse.GameResult.Winner,
-                    GameConfig.GameChoices.getNameByValue(computerSelection)
+                    GameConfig.GameChoice.getNameByValue(computerSelection)
                 )
             } else if (gameTurnRequest.userSelection.value() === 2 && computerSelection === 1) { // Paper beats rock
                 GameTurnResponse(
                     gameTurnRequest.turnNumber,
                     gameResult = GameTurnResponse.GameResult.Winner,
-                    GameConfig.GameChoices.getNameByValue(computerSelection)
+                    GameConfig.GameChoice.getNameByValue(computerSelection)
                 )
             } else if (gameTurnRequest.userSelection.value() === 3 && computerSelection === 2) { // Scissors beats paper
                 GameTurnResponse(
                     gameTurnRequest.turnNumber,
                     gameResult = GameTurnResponse.GameResult.Winner,
-                    GameConfig.GameChoices.getNameByValue(computerSelection)
+                    GameConfig.GameChoice.getNameByValue(computerSelection)
                 )
             }
             else {
                 GameTurnResponse(
                     gameTurnRequest.turnNumber,
                     gameResult = GameTurnResponse.GameResult.Loser,
-                    GameConfig.GameChoices.getNameByValue(computerSelection)
+                    GameConfig.GameChoice.getNameByValue(computerSelection)
                 )
             }
         } catch (e: Exception) {
