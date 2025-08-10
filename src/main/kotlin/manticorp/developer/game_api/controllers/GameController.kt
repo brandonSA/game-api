@@ -26,32 +26,37 @@ class GameController {
                 GameTurnResponse(
                     gameTurnRequest.turnNumber,
                     gameResult = GameTurnResponse.GameResult.Tie,
-                    GameConfig.GameChoice.getNameByValue(computerSelection)
+                    GameConfig.GameChoice.getNameByValue(computerSelection),
+                    userSelection = GameConfig.GameChoice.getNameByValue(gameTurnRequest.userSelection.value())
                 )
             } else if (gameTurnRequest.userSelection.value() === 1 && computerSelection === 3) { // Rock beats scissors
                 GameTurnResponse(
                     gameTurnRequest.turnNumber,
                     gameResult = GameTurnResponse.GameResult.Winner,
-                    GameConfig.GameChoice.getNameByValue(computerSelection)
+                    GameConfig.GameChoice.getNameByValue(computerSelection),
+                    userSelection = GameConfig.GameChoice.getNameByValue(gameTurnRequest.userSelection.value())
                 )
             } else if (gameTurnRequest.userSelection.value() === 2 && computerSelection === 1) { // Paper beats rock
                 GameTurnResponse(
                     gameTurnRequest.turnNumber,
                     gameResult = GameTurnResponse.GameResult.Winner,
-                    GameConfig.GameChoice.getNameByValue(computerSelection)
+                    GameConfig.GameChoice.getNameByValue(computerSelection),
+                    userSelection = GameConfig.GameChoice.getNameByValue(gameTurnRequest.userSelection.value())
                 )
             } else if (gameTurnRequest.userSelection.value() === 3 && computerSelection === 2) { // Scissors beats paper
                 GameTurnResponse(
                     gameTurnRequest.turnNumber,
                     gameResult = GameTurnResponse.GameResult.Winner,
-                    GameConfig.GameChoice.getNameByValue(computerSelection)
+                    GameConfig.GameChoice.getNameByValue(computerSelection),
+                    userSelection = GameConfig.GameChoice.getNameByValue(gameTurnRequest.userSelection.value())
                 )
             }
             else {
                 GameTurnResponse(
                     gameTurnRequest.turnNumber,
                     gameResult = GameTurnResponse.GameResult.Loser,
-                    GameConfig.GameChoice.getNameByValue(computerSelection)
+                    GameConfig.GameChoice.getNameByValue(computerSelection),
+                    userSelection = GameConfig.GameChoice.getNameByValue(gameTurnRequest.userSelection.value())
                 )
             }
         } catch (e: Exception) {
